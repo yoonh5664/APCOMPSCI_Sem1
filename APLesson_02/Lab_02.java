@@ -34,10 +34,6 @@ public class Lab_02
 		
 		System.out.println("The surface area of your rectangle is" + recSurfacearea);
 		
-		String first = "Harim";
-		String second = " Yoon";
-		
-		System.out.println(first + second);
 		
 		
 		
