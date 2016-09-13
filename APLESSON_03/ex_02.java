@@ -11,13 +11,13 @@ public class ex_02
 		System.out.println("What is your height? ");
 		
 		int height = keyboard.nextInt();
-		
 		System.out.println( height + " Okay. What is your weight? ");
 		
 		int weight = keyboard.nextInt();
-		nextInt();
+		System.out.println( weight + " Okay. Let me calculate your BMI. ");
 		
-		
+		int BMI = 703 * (weight / height);
+		System.out.println( "Your BMI is " + BMI );
 		
 	}
 }
