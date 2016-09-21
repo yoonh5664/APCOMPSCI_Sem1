@@ -7,7 +7,7 @@ public class ex_03
 		//instantiate the new Scanner object "keyboard"
 		Scanner keyboard = new Scanner(System.in);
 		
-		//prompt for user input
+		//prompt for user input3
 		System.out.println("So we're gonna calculate the area of the traingle. What is the height of the triangle? ");
 		
 		int height = keyboard.nextInt();
