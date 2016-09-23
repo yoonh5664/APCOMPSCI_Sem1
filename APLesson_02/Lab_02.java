@@ -14,25 +14,23 @@ public class Lab_02
 		
 		System.out.println("5 multiplied by 6 is " + recArea2);
 		
-		String third = "Name";
+		String third = "Hsrim Yoon";
 		
-		String fourth = "Address";
+		String fourth = "123 MAIN ST STE 45";
 	
-		String fifth = "City";
+		String fifth = "ANYTOWN NY 92130";
 		
-		String sixth = "Zip";
 		
 		System.out.println(third);
 		System.out.println(fourth);
 		System.out.println(fifth);
-		System.out.println(sixth);
 		
 		int l = 3;
 		int w = 4;
 		int h = 2;
 		int recSurfacearea = 2 * w * l + 2 * l * h + 2 * h * w;
 		
-		System.out.println("The surface area of your rectangle is" + recSurfacearea);
+		System.out.println("The surface area of your rectangle is " + recSurfacearea);
 		
 		
 		
