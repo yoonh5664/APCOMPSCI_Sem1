@@ -17,7 +17,7 @@ public class CompInterest
 		System.out.printf("Your total monthly payment is $%5.2f",  avg);
 	}
 	
-	public double payment(double p, double r, double t, double n)
+	public double payment(double p, double r, double n, double t)
 	{
 		return (p*(Math.pow(1+r/n, n*t)))/(t*12);
 	}

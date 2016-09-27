@@ -14,12 +14,11 @@ public class Lab_02
 		
 		System.out.println("5 multiplied by 6 is " + recArea2);
 		
-		String third = "Hsrim Yoon";
+		String third = "HARIM YOON";
 		
-		String fourth = "123 MAIN ST STE 45";
+		String fourth = "123 HELLO PLACE";
 	
-		String fifth = "ANYTOWN NY 92130";
-		
+		String fifth = "ANYTOWN, NY 92130";
 		
 		System.out.println(third);
 		System.out.println(fourth);
