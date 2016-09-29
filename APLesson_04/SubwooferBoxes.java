@@ -16,7 +16,8 @@ public class SubwooferBoxes
 		System.out.printf("The volume is %5.2f",  box);
 	}
 	
-	public double calcVol(double h, double l, double w){
+	public double calcVol(double h, double l, double w)
+	{
 		return (h*l*w)/1728;
 	}
 }
