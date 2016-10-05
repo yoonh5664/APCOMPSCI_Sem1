@@ -11,7 +11,7 @@ public class Average2
 		int num2 = kb.nextInt();
 		System.out.println("Please enter a number 3");
 		int num3 = kb.nextInt();
-		print(calcAvg(num1,num2,num3));
+		print(num1, num2, num3, calcAvg(num1,num2,num3));
 	}
 	
 	public static int calcAvg(int num1, int num2, int num3)
@@ -19,9 +19,9 @@ public class Average2
 		return (num1 + num2 + num3)/3;
 		
 	}
-	public static void print(String text, double average)
+	public static void print(double one, double two, double three, double avg)
 	{
-		System.out.printf("The average of %10.5f , %10.5f , and %10.5f is %10.5f." , num1, num2, num3, avg);
+		System.out.printf("The average of " + one + ", " + two + ", and " + three + " is %10.5f." , avg);
 		
 	}
 }

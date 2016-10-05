@@ -6,14 +6,14 @@ public class Cube2
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter a side");
 		int side = kb.nextInt();
-		print(calcSurf(side));
+		print( side, calcSurf(side));
 	}
-	public static int calcSurf(int side)
+	public static double calcSurf(int side)
 	{
 		return  6 *(side *side);
 		
 	}
-	public static void print(int sa)
+	public static void print(double side, double sa)
 	{
 		System.out.printf("The surface area of a cube with %10.5f sides is %10.5f.", side , sa);
 		
