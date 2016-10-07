@@ -1,13 +1,13 @@
-import java.util.Scanner; //import Statement
+import java.util.Scanner; 
 
 public class RudeAI
 {
 	public static void main(String[]args)
 	{
-		//instantiates the new Scanner object "keyboard"
+		
 		Scanner keyboard = new Scanner(System.in);
 		
-		//prompts for user input
+	
 		System.out.println("What is your name? ");
 		
 		String name = keyboard.next();
