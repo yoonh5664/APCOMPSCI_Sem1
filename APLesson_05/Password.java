@@ -13,7 +13,7 @@ public class PasswordProgram
 		System.out.println("What is your username?");
 		String username = kb.next();
 		System.out.println("What is your passsword?");
-		String 
+		String password = kb.next();
 		if(choice.equals("Y") || choice.equals("N"))
 		{
 			if(choice.equals("Y"))
