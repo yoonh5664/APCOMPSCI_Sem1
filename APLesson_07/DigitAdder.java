@@ -3,7 +3,6 @@ public class DigitAdder
 {
 	static int number;
 	static int sum = 0;
-	int num = number;
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
@@ -14,9 +13,10 @@ public class DigitAdder
 	}
 	public static void sumDigits()
 	{
+		int num = number;
 		while(num > 0)
 		{
-			number % 10 + sum
+			number % 10 += sum;
 			num /= 10;
 		}	
 	}
