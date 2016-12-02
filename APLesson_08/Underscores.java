@@ -1,22 +1,25 @@
 import java.util.Scanner;
 public class Underscores
 {
-	static Static sentence;
+	
 	
 	public static void main (String[]args)
 	{
+		
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter a sentence: ");
-		sentence = kb.nextLine();
-		replace();
+		String sentence = kb.nextLine();
+		System.out.println(replace(sentence));
 	}
 	
-	public static void replace()
+	public static String replace(String sentence)
 	{
-		while()
-		{
-			sum += (num % 10);
-			num /= 10;
-		}	
+		if(sentence.indexOf(" ") < 0){
+			return sentence;
+		}
+		else{
+			return replace(sentence.substring(0, (sentence.indexOf(" "))) + "_" + sentence.substring((sentence.indexOf(" ") + 1), sentence.length()));
+		}
 	}	
+	
 }
