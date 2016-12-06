@@ -18,7 +18,7 @@ public class Center
 	}
 	public static String makeCenter(String words)
 	{
-		if(word.length() >=  20)
+		if(words.length() >=  20)
 		{
 			return words;
 		}

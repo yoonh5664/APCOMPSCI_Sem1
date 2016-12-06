@@ -22,4 +22,6 @@ public class FibonacciSequence
 				seq[i] = seq[i-1] + seq[i-2];
 			}
 			System.out.println(seq[i] + " ");
+		}
+	}
 }

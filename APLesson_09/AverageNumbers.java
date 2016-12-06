@@ -20,7 +20,7 @@ public class AverageNumbers
 	
 	public static int average(int[] nums)
 	{
-		int sum = 0
+		int sum = 0;
 		for(int num : nums)
 		{
 			sum += num;
