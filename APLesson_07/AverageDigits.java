@@ -4,17 +4,15 @@ public class AverageDigits
 	static int number;
 	static int digits = 0;
 	static double average = 0;
+	static double avg;
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter a number: ");
 		number = kb.nextInt();
 		avDigits();
-<<<<<<< HEAD
-		System.out.println("The average of the digits in" + number + "is" + average);
-=======
-		System.out.println("The average of the digits in " + number + " is " + average);
->>>>>>> origin/master
+		System.out.println("The average of the digits in " + number + " is " + avg);
+
 	}
 	public static void avDigits()
 	{
@@ -22,13 +20,8 @@ public class AverageDigits
 		while(num > 0)
 		{
 			digits += 1;
-<<<<<<< HEAD
 			average = average + (num % 10);
-=======
-			average += (num % 10);
->>>>>>> origin/master
 			num /= 10;
-			average /= digits; 
 		}	
 		avg = average / digits;
 	}
