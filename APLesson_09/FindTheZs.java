@@ -1,26 +1,44 @@
 import java.util.Scanner;
 public class FindTheZs
 {
+	static String [] words = new String[5];
 	public static void main(String[]args)
 	{
+		fillArray();
+		System.out.println("For the words... ");
+		printArray();
+		System.out.println("");
+		System.out.println("Only " + hasZs() + " contains the letter z.");
+	}	
+	
+	public static void fillArray()
+	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter starting number: ");
-		int start = kb.nextInt();
-		System.out.println("Please enter sequence size: ");
-		int size = kb.nextInt();
-		
-		int[]seq = new int[size];
-		
-		for(int i = 0; i < seq.length; i++)
+		System.out.println("Please enter 5 words: ");
+		for(int i = 0; i < words.length; i++ )
 		{
-			if(i == 0 || i == 1)
+			words[i] = kb.next();
+		}
+	}
+	
+	public static void printArray()
+	{
+		for(String word : words)
+		{
+			System.out.print(word + "\t");
+		}
+	}
+	
+	public static String hasZs()
+	{
+		String zs = "";
+		for(String word : words)
+		{
+			if(word.indexOf("z") >= 0)
 			{
-				seq[i] = start;
-			}
-			else 
-			{
-				seq[i] = seq[i-1] + seq[i-2];
-			}
-			System.out.println(seq[i] + " ");
+				zs += word;
+			}	
+		}
+		return zs;
+	}
 }
-not done 
