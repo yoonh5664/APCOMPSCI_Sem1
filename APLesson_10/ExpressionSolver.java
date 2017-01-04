@@ -4,11 +4,12 @@ import java.util.Arrays;
 
 public class ExpressionSolver
 {
-	public static void mian(String[]args)
+	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter an expression: ");
 		String initial_expression = kb.nextLine();
+		
 		ArrayList<String> expression = new ArrayList<>(Arrays.asList(initial_expression.split(" ")));
 		System.out.println(doExpression(expression));
 	}
