@@ -38,7 +38,7 @@ public class ExpressionSolver
 		i = 0;
 		while(i < expression.size())
 		{
-			if(expression.get(i).equals("*") || expression.get(i).equals("-"))
+			if(expression.get(i).equals("+") || expression.get(i).equals("-"))
 			{
 				if(expression.get(i).equals("+"))
 				{
