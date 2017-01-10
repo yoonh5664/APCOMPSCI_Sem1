@@ -8,52 +8,53 @@ public class ExpressionSolver
 	{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter an expression: ");
-		String initial_expression = kb.nextLine();
+		String expression = kb.nextLine();
 		
-		ArrayList<String> expression = new ArrayList<>(Arrays.asList(initial_expression.split(" ")));
-		System.out.println(doExpression(expression));
+		ArrayList<String> equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
+		System.out.println(doExpression(equation));
 	}
 	
-	public static ArrayList<String> doExpression(ArrayList<String> expression)
+	public static ArrayList<String> doExpression(ArrayList<String> equation)
 	{
+		 
 		int i = 0;
-		while(i < expression.size())
+		while(i < equation.size())
 		{
-			if(expression.get(i).equals("*") || expression.get(i).equals("/"))
+			if(equation.get(i).equals("*") || equation.get(i).equals("/"))
 			{
-				if(expression.get(i).equals("*"))
+				if(equation.get(i).equals("*"))
 				{
-					expression.set(i, "" + (Integer.parseInt(expression.get(i-1)) * Integer.parseInt(expression.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) * Integer.parseInt(equation.get(i+1))));
 				}
 				else
 				{
-					expression.set(i, "" + (Integer.parseInt(expression.get(i-1)) / Integer.parseInt(expression.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) / Integer.parseInt(equation.get(i+1))));
 				}
-				expression.remove(i-1);
-				expression.remove(i);
+				equation.remove(i-1);
+				equation.remove(i);
 			}
 			else
 				i++;
 		}
 		i = 0;
-		while(i < expression.size())
+		while(i < equation.size())
 		{
-			if(expression.get(i).equals("+") || expression.get(i).equals("-"))
+			if(equation.get(i).equals("+") || equation.get(i).equals("-"))
 			{
-				if(expression.get(i).equals("+"))
+				if(equation.get(i).equals("+"))
 				{
-					expression.set(i, "" + (Integer.parseInt(expression.get(i-1)) + Integer.parseInt(expression.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
 				}
 				else
 				{
-					expression.set(i, "" + (Integer.parseInt(expression.get(i-1)) - Integer.parseInt(expression.get(i+1))));
+					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
 				}
-				expression.remove(i-1);
-				expression.remove(i);
+				equation.remove(i-1);
+				equation.remove(i);
 			}
 			else
 				i++;
 		}
-		return expression;
+		return equation;
 	}
 }
