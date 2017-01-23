@@ -2,12 +2,13 @@ import java.util.Scanner;
 public class GameGun
 {
 	static int bulletCount;
-	static int CLIPSIZE = 16;
+	static int CLIPSIZE;
 	static int shotCount;
 	static String[] clip;
 	
 	public static void main(String[]args)
 	{
+		Scanner kb = new Scanner(System.in);
 		bulletCount = 96;
 		shotCount = 0;
 		clip = new String[CLIPSIZE];
@@ -15,7 +16,6 @@ public class GameGun
 		
 		while(bulletCount > 0 || shotCount > 0)
 		{
-			Scanner kb = new Scanner(System.in);
 			System.out.println("Action: ");
 			String action = kb.next();
 			if(action.equals ("R"))
@@ -44,7 +44,7 @@ public class GameGun
 		if(shotCount > 0)
 		{
 			clip[shotCount -= 1] = "[]";
-			shotCount -= 1;
+			shotCount--;
 			return "Boom!!!";
 		}
 		else
@@ -65,8 +65,6 @@ public class GameGun
 			shotCount = bulletCount;
 			bulletCount = 0;
 		}	
-		shotCount = bulletCount;
-		bulletCount = 0;
 		resetClip();
 	
 		for(int i = 0; i < shotCount; i++)

@@ -14,34 +14,36 @@ public class GameHealth
 		healthCount = 6;
 		health = new String[HEALTHLOAD];
 	
-		while(turn.equals("Q") && healthCount > 0)
-		System.out.println("Your turn! Hit Enter when ready: ");
-		String turn = kb.next();
-		int damage = (int)(Math.random() * 2) + 1;
-		int ammount = (int)(Math.random() * 6) + 1;
-		println(takeDamage());
-		printClip();
-		println("You died!!!");
+		while(!(turn.equals("Q")) && healthCount > 0)
+		{
+			System.out.println("Your turn! Hit Enter when ready: ");
+			turn = kb.nextLine();
+			damage = (int)(Math.random() * 2) + 1;
+			amount = (int)(Math.random() * 6) + 1;
+			System.out.print(takeDamage(damage, amount));
+			printClip();
+		}
+		System.out.println("You died!!!");
 	}
 	
-	public static void takeDamage()
+	public static void takeDamage(int dmg, int amt)
 	{
-		if(dmg = 1)
+		if(dmg == 1)
 		{
-			healthCount -= ammount;
-			return "Taking " + ammount + "damage!";
+			healthCount -= amt;
+			return "Taking " + amt + "damage!";
 		}
 		else
 		{
-			if(healthCount + ammount < HEALTHLOAD)
+			if((healthCount + amt) < HEALTHLOAD)
 			{
-				healthCount += ammount;
+				healthCount += amt;
 			}
 			else
 			{
 				healthCount = HEALTHLOAD;
 			}
-			return "Power up" + ammount + " !";
+			return "Power up" + amt + " !";
 		}
 	}
 	
