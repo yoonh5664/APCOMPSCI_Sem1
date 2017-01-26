@@ -10,7 +10,7 @@ public class GameHealth
 		Scanner kb = new Scanner(System.in);
 		String turn = "";
 		int damage = 0;
-		int ammount = 0;
+		int amount = 0;
 		healthCount = 6;
 		health = new String[HEALTHLOAD];
 	
@@ -20,13 +20,13 @@ public class GameHealth
 			turn = kb.nextLine();
 			damage = (int)(Math.random() * 2) + 1;
 			amount = (int)(Math.random() * 6) + 1;
-			System.out.print(takeDamage(damage, amount));
+			takeDamage(damage, amount);
 			printClip();
 		}
 		System.out.println("You died!!!");
 	}
 	
-	public static void takeDamage(int dmg, int amt)
+	public static String takeDamage(int dmg, int amt)
 	{
 		if(dmg == 1)
 		{

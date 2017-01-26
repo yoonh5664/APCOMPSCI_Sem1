@@ -1,16 +1,14 @@
 import java.util.Scanner;
 public class GameGun
 {
-	static int bulletCount;
-	static int CLIPSIZE;
-	static int shotCount;
+	static int bulletCount = 96;
+	static int CLIPSIZE = 16;
+	static int shotCount = 0;
 	static String[] clip;
 	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		bulletCount = 96;
-		shotCount = 0;
 		clip = new String[CLIPSIZE];
 		resetClip();
 		
