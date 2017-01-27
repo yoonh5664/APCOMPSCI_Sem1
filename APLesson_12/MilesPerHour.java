@@ -12,19 +12,25 @@ public class MilesPerHour
 		mph = 0;
 	}
 	
-	public MilesPerHour(String distance, String hours, String minutes)
+	public MilesPerHour(int dis, int hrs, int mins)
 	{
+		distance = dis;
+		hours = hrs;
+		minutes = mins;
 		mph = 0;
 	}
 	
-	public void setValues(String distance, String hours, String minutes)
+	public void setValues(int dis, int hrs, int mins)
 	{
+		distance = dis;
+		hours = hrs;
+		minutes = mins;
 		mph = 0;
 	}
 	
-	public String getMPH()
+	public double getMPH()
 	{
-		return mph;
 		mph = Math.round(distance / (hours + minutes / 60.0));
+		return mph;
 	}
 }
