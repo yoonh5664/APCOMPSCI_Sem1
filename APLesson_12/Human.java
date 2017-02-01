@@ -9,18 +9,18 @@ public class Human
 		skin = "";
 	}
 	
-	public Human(String h, String e, String s)
+	public Human(String H, String E, String S)
 	{
-		hair = h;
-		eyes = e;
-		skin = s;
+		hair = H;
+		eyes = E;
+		skin = S;
 	}
 	
-	public void setHES(String h, String e, String s)
+	public void setHES(String H, String E, String S)
 	{
-		hair = h;
-		eyes = e;
-		skin = s;
+		hair = H;
+		eyes = E;
+		skin = S;
 	}
 	
 	public String getHair()

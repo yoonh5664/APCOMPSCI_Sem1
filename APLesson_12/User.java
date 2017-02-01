@@ -11,17 +11,17 @@ public class User
 		userID = 0;
 	}
 	
-	public User(String fN, String lN)
+	public User(String F, String L)
 	{
-		firstName = fN;
-		lastName = lN;
-		avatar = av;
+		firstName = F;
+		lastName = L;
+		avatar = A;
 		userID = (int)(Math.random() * 1000000) + 1;
 	}
 	
-	public void setAvatar(String av)
+	public void setAvatar(String A)
 	{
-		avatar = av;
+		avatar = A;
 	}
 	
 	public String toString()

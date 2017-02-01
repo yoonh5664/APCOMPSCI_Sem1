@@ -12,19 +12,19 @@ public class MilesPerHour
 		mph = 0;
 	}
 	
-	public MilesPerHour(int dis, int hrs, int mins)
+	public MilesPerHour(int D, int H, int M)
 	{
-		distance = dis;
-		hours = hrs;
-		minutes = mins;
+		distance = D;
+		hours = H;
+		minutes = M;
 		mph = 0;
 	}
 	
-	public void setValues(int dis, int hrs, int mins)
+	public void setValues(int D, int H, int M)
 	{
-		distance = dis;
-		hours = hrs;
-		minutes = mins;
+		distance = D;
+		hours = H;
+		minutes = M;
 		mph = 0;
 	}
 	

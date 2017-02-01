@@ -21,7 +21,7 @@ public class InventoryDriver
 		{
 			System.out.println("Please enter the item category: ");
 			String category = kb.nextLine();
-			System.out.println(Please enter the item price: ");
+			System.out.println("Please enter the item price: ");
 			double price = kb.nextDouble();
 			Inventory item1 = new Inventory(manufacturer, name, category, price);
 			System.out.println(item1);

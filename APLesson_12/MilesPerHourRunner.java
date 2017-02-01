@@ -1,7 +1,7 @@
-import java.lang.Math.*;
+import java.util.Scanner;
 public class MilesPerHourRunner
 {
-	public static void main (String[]args)
+	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter the distance: ");
@@ -17,5 +17,6 @@ public class MilesPerHourRunner
 		System.out.println(distance + " miles in " + hours + " hours, " + minutes + " minutes = " + object.getMPH());
 		object.setValues(10000, 3, 7);
 		System.out.println("10000 miles in 3 hours, 7 minutes = " + object.getMPH() + "mph");
-	}	
+	}
+}	
 	

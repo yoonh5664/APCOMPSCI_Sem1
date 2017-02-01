@@ -11,7 +11,7 @@ public class HumanDriver
 		System.out.println("Please enter your skin color: ");
 		String skin = kb.nextLine();
 		
-		Human object = new Human(hair, eyes, skin);
+		Human object = new Human(hair, eye, skin);
 		
 		System.out.println("My Information... ");
 		System.out.println("Hair: " + object.getHair());
