@@ -19,11 +19,7 @@ public class DistanceRunner
 		System.out.printf("\nSecond Point = (%3d,%3d)", object.getX2(), object.getY2());
 		System.out.printf("\nDistance = %4.2f", object.getDistance(xOne, yOne, xTwo, yTwo));
 		
-		object.setDistance(1,2,3,4);
 		
-		System.out.printf("\nFirst Point = (%3d,%3d)", object.getX1(), object.getY1());
-		System.out.printf("\nSecond Point = (%3d,%3d)", object.getX2(), object.getY2());
-		System.out.printf("\nDistance = %4.2f", object.getDistance(xOne, yOne, xTwo, yTwo));
 		
 	}
 }
