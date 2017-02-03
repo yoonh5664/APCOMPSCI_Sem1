@@ -10,7 +10,7 @@ public class GameGun
 	{
 		Scanner kb = new Scanner(System.in);
 		bulletCount = 96;
-		shotCount = 0
+		shotCount = 0;
 		
 		resetClip();
 		
@@ -25,8 +25,9 @@ public class GameGun
 			if(action.equals ("S"))
 			{
 				System.out.println(shoot());
-				printClip();
+				
 			}
+			printClip();
 		}		
 		System.out.println("Out of Bullets!!!");
 	}
@@ -79,6 +80,7 @@ public class GameGun
 	{
 		String output = " ";
 		System.out.println(" Bullets:\t" + bulletCount + "\nClip:\t");
+
 		for(int i = 0; i < CLIPSIZE; i++)
 		{
 			output += clip[i];

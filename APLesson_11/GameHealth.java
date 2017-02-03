@@ -14,10 +14,10 @@ public class GameHealth
 		healthCount = 6;
 		health = new String[HEALTHLOAD];
 	
-		while(turn != "Q" && healthCount > 0)
+		while(!(turn.equals("Q")) && healthCount > 0)
 		{
 			System.out.println("Your turn! Hit Enter when ready: ");
-			turn = kb.next();
+			turn = kb.nextLine();
 			damage = (int)(Math.random() * 2) + 1;
 			amount = (int)(Math.random() * 6) + 1;
 			System.out.println(takeDamage(damage, amount));
@@ -26,28 +26,28 @@ public class GameHealth
 		System.out.println("You died!!!");
 	}
 	
-	public static void takeDamage(int damage, int amount)
+	public static String takeDamage(int dmg, int amt)
 	{
-		if(damage == 1)
+		if(dmg == 1)
 		{
-			healthCount -= amount;
-			return System.out.println("Taking " + amount + "damage!");
+			healthCount -= amt;
+			return "Taking " + amt + "damage!";
 		}
 		else
 		{
-			if((healthCount + amount) < HEALTHLOAD)
+			if((healthCount + amt) < HEALTHLOAD)
 			{
-				healthCount += amount;
+				healthCount += amt;
 			}
 			else
 			{
 				healthCount = HEALTHLOAD;
 			}
-			return System.out.println("Power up" + amount );
+			return "Power up" + amt ;
 		}
 	}
 	
-	public static void printClip(int damage, int amount)
+	public static void printClip()
 	{
 		String output = "Health:\t";
 		for(int i = 0; i < HEALTHLOAD; i++)
@@ -58,8 +58,10 @@ public class GameHealth
 			}
 			else
 			{
-				health[i] = output;
+				health[i] = "[]";
+				
 			}
+			output += health[i];
 		}
 		System.out.println(output);
 	}

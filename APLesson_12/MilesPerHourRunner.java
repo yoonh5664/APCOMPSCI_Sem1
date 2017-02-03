@@ -13,9 +13,9 @@ public class MilesPerHourRunner
 		
 		MilesPerHour object = new MilesPerHour(distance, hours, minutes);
 		
-		System.out.println(object.getDistance() + " miles in " + object.getHours() + " hours, " + object.getMinutes() + " minutes = " + object.getMilesPerHour(distance, hours, minutes) + " mph");
-		object.setMilesPerHours(12, 1, 30);
-		System.out.println(object.getDistance() + " miles in " + object.getHours() + " hours " + object.getMinutes() + " minutes = " + object.getMilesPerHour(12, 1, 30) + " mph");
+		System.out.println(distance + " miles in " + hours + " hours, " + minutes + " minutes = " + object.getMilesPerHour() + " mph");
+		object.setValues(distance, hours, minutes);
+		System.out.println(distance + " miles in " + hours + " hours " + minutes + " minutes = " + object.getMilesPerHour() + " mph");
 	}
 }	
 	
