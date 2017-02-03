@@ -10,13 +10,12 @@ public class MilesPerHourRunner
 		int hours = kb.nextInt();
 		System.out.println("Please enter the minutes: ");
 		int minutes = kb.nextInt();
-		double mph = 0;
 		
 		MilesPerHour object = new MilesPerHour(distance, hours, minutes);
 		
-		System.out.println(distance + " miles in " + hours + " hours, " + minutes + " minutes = " + object.getMPH());
-		object.setValues(10000, 3, 7);
-		System.out.println("10000 miles in 3 hours, 7 minutes = " + object.getMPH() + "mph");
+		System.out.println(object.getDistance() + " miles in " + object.getHours() + " hours, " + object.getMinutes() + " minutes = " + object.getMilesPerHour(distance, hours, minutes) + " mph");
+		object.setMilesPerHours(12, 1, 30);
+		System.out.println(object.getDistance() + " miles in " + object.getHours() + " hours " + object.getMinutes() + " minutes = " + object.getMilesPerHour(12, 1, 30) + " mph");
 	}
 }	
 	

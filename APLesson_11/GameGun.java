@@ -4,18 +4,18 @@ public class GameGun
 	static int bulletCount;
 	static int CLIPSIZE = 16;
 	static int shotCount;
-	static String[] clip;
+	static String[] clip = new String[CLIPSIZE];
 	
 	public static void main(String[]args)
 	{
+		Scanner kb = new Scanner(System.in);
 		bulletCount = 96;
 		shotCount = 0
-		clip = new String[CLIPSIZE];
+		
 		resetClip();
 		
 		while(bulletCount > 0 || shotCount > 0)
 		{
-			Scanner kb = new Scanner(System.in);
 			System.out.println("Action: ");
 			String action = kb.next();
 			if(action.equals ("R"))
@@ -44,8 +44,9 @@ public class GameGun
 	{
 		if(shotCount > 0)
 		{
-			clip[shotCount-1] = "[]";
+			clip[shotCount - 1] = "[]";
 			shotCount -= 1;
+			
 			return "Boom!!!";
 		}
 		else
@@ -76,8 +77,8 @@ public class GameGun
 	
 	public static void printClip()
 	{
-		String output = "";
-		System.out.println(" Bullets: " + "\t" + bulletCount + "\n" + "Clip: " + "\t";
+		String output = " ";
+		System.out.println(" Bullets:\t" + bulletCount + "\nClip:\t");
 		for(int i = 0; i < CLIPSIZE; i++)
 		{
 			output += clip[i];

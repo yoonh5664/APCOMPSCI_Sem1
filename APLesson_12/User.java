@@ -15,6 +15,14 @@ public class User
 	{
 		firstName = F;
 		lastName = L;
+		avatar = "Undefined";
+		userID = (int)(Math.random() * 1000000) + 1;
+	}
+	
+	public User(String F, String L, String A)
+	{
+		firstName = F;
+		lastName = L;
 		avatar = A;
 		userID = (int)(Math.random() * 1000000) + 1;
 	}
